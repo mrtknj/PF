@@ -1,0 +1,21 @@
+<div class='container'>
+  <div class='row'>
+      <div class='col-lg-12 mx-auto '>
+        <div style="position: relative">
+          <%= image_tag "top.jpg", width: "100%" %>
+          <div style="position: absolute; top: 15%; left: 14%; text-align: center;">
+            <span style="font-size:100px; color:black"> Your Game!! </span></br>
+            <span style="font-size:50px; color:black;">
+            サインインまたはサインアップして</br>
+            あなたが楽しめる</br>
+            ゲームを見つけましょう！！</br>
+            </span>
+            <div class='d-block'>
+            <%= link_to "サインイン", new_user_session_path, class: 'btn btn-primary w-50 mt-2' %></br>
+            <%= link_to "サインアップ", new_user_registration_path, class: 'btn btn-primary w-50 mt-2' %>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
