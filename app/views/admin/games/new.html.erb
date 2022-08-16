@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <h2>ゲーム新規登録</h2>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <%= form_with model: @game, url: admin_games_path, method: :post do |f| %>
+        <div class="form-inline">
+          <label for="game_name">ゲーム名</label>
+          <%= f.text_field :name, placeholder: "ゲームタイトル", style: "width: 50%" %>
+        </div>
+        <div class="form-inline">
+          <label for="game_summary">ゲーム概要</label>
+          <%= f.text_area :summary, placeholder: "概要説明", class: 'form-control',size: "21x7" %>
+        </div>
+        <div class="form-inline">
+          <label for="game_price">税込み価格</label>
+          <%= f.number_field :price,　placeholder: "5000円", class:"form-control name" %>
+        </div>
+        <div class="form-inline">
+          <label for="game_image">パッケージ画像</label>
+          <%= f.file_field :image, accept: "image/*", class:"form-control-file item_image" %>
+        </div>
+        <div class="form-inline">
+          <label for="game_image">ジャンル</label>
+         
+        </div>
+        <div class="form-inline">
+          <label for="game_image">対応デバイス</label>
+          
+        </div>
+        <div class="form-inline">
+          <label for="game_cero">CERO</label>
+          <%= f.select :cero, Game.ceros.keys.to_a, {}, class:"form-control form-control-sm col-6" %>
+        </div>
+        <div class="form-inline">
+         <%= f.submit '新規登録', class:"btn btn-success" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

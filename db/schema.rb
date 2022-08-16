@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_11_135755) do
+ActiveRecord::Schema.define(version: 2022_08_12_084148) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(version: 2022_08_11_135755) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.integer "genre_id", null: false
-    t.integer "device_id", null: false
+    t.integer "genre_id"
+    t.integer "device_id"
     t.string "name", null: false
     t.text "summary", null: false
     t.integer "price", null: false
@@ -91,7 +91,7 @@ ActiveRecord::Schema.define(version: 2022_08_11_135755) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "name", null: false
-    t.text "introduction", null: false
+    t.text "introduction"
     t.boolean "is_deleted", default: true, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

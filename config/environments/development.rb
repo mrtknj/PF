@@ -76,4 +76,5 @@ Rails.application.configure do
   config.active_job.queue_adapter = :inline
   
   config.hosts << "87c55f1ea5904291ac1cc8fb515bc045.vfs.cloud9.ap-northeast-1.amazonaws.com"
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

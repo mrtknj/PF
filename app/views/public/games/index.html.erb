@@ -1,0 +1,25 @@
+<div class="container px-5 px-sm-0">
+  <div class="row">
+  <h2>ゲーム一覧</h2>
+  </div>
+  <div class="row">
+  <% @games.each do |game| %>
+    <div class="col-sm4 offset-2">
+    <%= image_tag game.get_image(300, 300) %>
+    </div>
+      <div class = "col-sm8 ml-5 mt-5">
+      <table>
+        <tbody>
+          <tr>
+            <th><%= game.name %></th>
+          </tr>
+          <tr>
+            <th><%= game.price %> (<%= game.with_tax_price %>) 円</th>
+            <th><%= game.cero %></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <% end %>
+  </div>
+</div>
